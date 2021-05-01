@@ -7,7 +7,7 @@ Implementation of ICASSP2021 paper: VISUAL PRIVACY PROTECTION VIA MAPPING DISTOR
 pip install -r requirements.txt
 ```
 
-## modified CIFAR-10 generation
+## Generating the Modified CIFAR-10 Dataset
 
 - Download [pretrained model](https://drive.google.com/file/d/1BVPlp5ory1smQOD1GKB5Gop2cqGHT7m2/view?usp=sharing) from Google Drive and put it in the folder "/path/to/project/runs/train_original_cifar10/checkpoints/".
 
@@ -36,15 +36,15 @@ bash generate_modified_cifar10.sh /path/to/project/experiments/generate_modified
 - Check modified cifar10 (T=2) locates at '/path/to/project/data/generate_modified_cifar10_resnet_multi2/'.
 
 
-## modified CIFAR-10 generalization
+## Training on the Modified CIFAR-10 Dataset
 
-- Run the script below to start the generalization process for MDP.
+- Run the script below to start the training process for MDP.
 
 ```bash
 bash train_modified_cifar10.sh /path/to/project/experiments/train_modified_cifar10.yaml
 ```
 
-- Run the script below to start the generalization process for AugMDP (T=2).
+- Run the script below to start the training process for AugMDP (T=2).
 
 ```bash
 bash train_modified_cifar10.sh /path/to/project/experiments/train_modified_cifar10_multi2.yaml
