@@ -1,0 +1,41 @@
+TASK_NAME: train_modified_cifar10_multi2
+ROOT_DIR: /path/to/project/
+SAVE_DIR:  runs # checkpoint save root and tensorboard root
+RESUME: False
+ONLY_EVALUATE: False
+SEED: 1024
+GPU_ID: '0'
+
+MODEL:
+  TORCHVISION: False
+  TYPE: resnet_gen
+  DEPTH: 50
+
+TRAIN:
+  PRETRAINED: False
+  BATCH_SIZE: 128
+
+VALID:
+  EPOCH: 5
+  BATCH_SIZE: 128
+
+SOLVER:
+  TYPE: SGD 
+  LR: 0.01
+  LR_POLICY: CosineAnnealingLR
+  LR_STEP: 50
+  MULTI_LR_STEPS: [120, 160]
+  MOMENTUM: 0.9
+  WEIGHT_DECAY: 0.0005
+  MAX_EPOCH: 300
+
+DATA:
+  DATASET: cifar10
+  TRAIN_DATAPATH: data/generate_modified_cifar10_resnet_multi2/ # modified dataset
+  VAL_DATAPATH: data/testdir/ # standard testset
+  NUM_WORKERS: 0
+  AUGMENTATION: True
+
+RECORD:
+  TENSOR_BOARD: True
+  PRINT_FREQUENCY: 10

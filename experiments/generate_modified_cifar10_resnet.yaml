@@ -1,0 +1,29 @@
+ROOT_DIR: /path/to/project/
+CHECKPOINT_PATH: runs/train_original_cifar10/checkpoints/best.pth # pretrain model for generating modified dataset
+SEED: 1024
+GPU_ID: '0'
+
+MODEL:
+  TORCHVISION: False # whether model ies from torchvision
+  TYPE: resnet_gen
+  DEPTH: 50
+
+TRAIN:
+  PRETRAINED: False # whether pretrained when model is from torchvision
+  BATCH_SIZE: 128 
+
+DATA:
+  DATASET: cifar10
+  NUM_WORKERS: 0
+  GENERATE_NUM: 1 # hyper-parameter T, control the augmentation size
+
+RECORD:
+  TENSOR_BOARD: True
+  PRINT_FREQUENCY: 10
+
+ATTACK:
+  STEP_SIZE: 0.1 # PGD hyper-parameter: step size
+  ITERATION: 100 # PGD hyper-parameter: iteration
+
+GENERATE:
+  SAVE_DIR: data/generate_modified_cifar10_resnet/train
