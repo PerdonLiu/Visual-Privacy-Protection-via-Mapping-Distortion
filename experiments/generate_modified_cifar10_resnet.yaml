@@ -4,7 +4,7 @@ SEED: 1024
 GPU_ID: '0'
 
 MODEL:
-  TORCHVISION: False # whether model ies from torchvision
+  TORCHVISION: False # whether model is from torchvision
   TYPE: resnet_gen
   DEPTH: 50
 
