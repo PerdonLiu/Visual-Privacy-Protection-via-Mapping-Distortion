@@ -1,8 +1,7 @@
 Implementation of ICASSP2021 paper: VISUAL PRIVACY PROTECTION VIA MAPPING DISTORTION. This repository mainly contains the code for image classification with CIFAR-10 dataset.
 
-## Preparation
+## Install Prerequisites
 
-- python3.6.2, pytorch1.7.0
 ```bash
 pip install -r requirements.txt
 ```
