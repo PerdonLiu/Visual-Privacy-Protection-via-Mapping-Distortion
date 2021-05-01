@@ -1,4 +1,5 @@
-Implementation of ICASSP2021 paper: VISUAL PRIVACY PROTECTION VIA MAPPING DISTORTION. This repository mainly contains the code for image classification with CIFAR-10 dataset.
+This is the implementation of our paper 'Visual Privacy Protection via Mapping Distortion', accepted by the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) 2021. This project is developed based on Python 3.6, created by [Peidong Liu](https://perdonliu.github.io/) and [Yiming Li](http://liyiming.tech/).
+
 
 ## Install Prerequisites
 
